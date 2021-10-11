@@ -23,12 +23,14 @@ namespace ProEventos.API.Controllers
     [HttpGet]
     public IEnumerable<Evento> Get()
     {
+      //retornando um array de eventos :)
       return _context.Eventos;
     }
 
     [HttpGet("{id}")]
     public Evento GetById(int id)
     {
+      //retornando um elemento específico --- FirstOrDefault -> retorna o primeiro elemento encontrado ou um valor default.
       return _context.Eventos.FirstOrDefault(evento => evento.EventoId == id);
     }
 
