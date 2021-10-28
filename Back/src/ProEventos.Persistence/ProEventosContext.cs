@@ -16,6 +16,7 @@ namespace ProEventos.Persistence
         {
             modelBuilder.Entity<PalestranteEvento>()
                 .HasKey(PE => new {PE.EventoId, PE.PalestranteId});
+            //Significa que essa classe será a classe de junção entre Eventos e Palestrantes
             //PE = PalestranteEvento 
         }
     }
